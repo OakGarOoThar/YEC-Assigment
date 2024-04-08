@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assigment 3 </title>
+</head>
+<body>
+  <h1>Assigment 3: Palindrome Checker</h1>
+
+  
+  <script>
+    function isPalindrome(str) {
+      const processedString = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+    
+      const reversedString = processedString.split("").reverse().join("");
+      return processedString === reversedString;
+    }
+    
+    // Test cases
+    console.log(isPalindrome("racecar")); // Output: true
+    console.log(isPalindrome("hello")); // Output: false
+    console.log(isPalindrome("A man, a plan, a canal: Panama")); // Output: true (ignoring spaces and punctuation)
+  </script>
+</body>
+</html>
